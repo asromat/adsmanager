@@ -45,7 +45,7 @@ class Notify extends CI_Controller
             } 
         } 
 
-        $kalimat = "*[UPDATE PERKEMBANGAN WARTAWAN JTN NETWORK]*\n\nTotal Tulisan " . date("Y") . "/" . date("m"). " = ". $total_tulisan . "\n\n" . $pesan;
+        $kalimat = "*[UPDATE PERKEMBANGAN WARTAWAN JTN NETWORK]*\n\n*Total Tulisan* " . date("Y") . "/" . date("m"). " = ". $total_tulisan . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa");
         $this->wa->send("081231390340", $kalimat);
     }
 }
