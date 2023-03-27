@@ -72,7 +72,7 @@
 
                 <div class="form-links mt-2">
                     <div>
-                        <a href="https://wa.me/+6281231390340">Belum punya akun? Chat Tim IT</a>
+                        <a href="https://wa.me/+6285157000915">Belum punya akun? Chat Tim IT</a>
                     </div>
                     <!-- <div><a href="app-forgot-password.html" class="text-muted">Forgot Password?</a></div> -->
                 </div>
