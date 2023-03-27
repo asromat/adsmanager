@@ -46,7 +46,6 @@ class Notify extends CI_Controller
         } 
 
         $kalimat = "*[UPDATE PERKEMBANGAN WARTAWAN JTN NETWORK]*\n\nTotal Tulisan " . date("Y") . "/" . date("m"). " = ". $total_tulisan . "\n\n" . $pesan;
-        echo $kalimat;
-        // $this->wa->send("081231390340", $kalimat);
+        $this->wa->send("081231390340", $kalimat);
     }
 }
