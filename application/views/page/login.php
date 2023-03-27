@@ -3,17 +3,19 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
-    <title>EDSCIENCE | BIKINKARYA CREATIVE MEDIA</title>
-    <meta name="description" content="Bikinkarya Creative Media">
-    <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
-    <link rel="icon" type="image/png" href="<?=base_url()?>/assets/img/favicon.png" sizes="32x32">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <title>JTN Ads Manager - Login Pages</title>
+    <meta name="description" content="Jatim Times Network Ads Manager - Provided by JTN IT">
+    <meta name="keywords" content="Ads Manager Jatim Times" />
+    <link rel="icon" type="image/png" href="https://www.jatimtimes.com/v3/assets/img/logo/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.jatimtimes.com/v3/assets/img/logo/favicon.ico">
     <link rel="stylesheet" href="<?=base_url()?>/assets/css/style.css">
-    <link rel="manifest" href="__manifest.json">
+    <link rel="manifest" href="<?=base_url()?>/__manifest.json">
 </head>
 
 <body>
@@ -36,8 +38,8 @@
     <div id="appCapsule">
 
         <div class="section mt-2 text-center">
-            <h1>Log in</h1>
-            <h4>Masukkan Email dan Password anda</h4>
+            <h1>Jatim Times Ads Manager</h1>
+            <h4>Masukkan Username dan Password</h4>
         </div>
         <div class="section mb-5 p-2">
 		<?php $this->view('message'); ?>
@@ -46,8 +48,8 @@
                     <div class="card-body pb-1">
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <label class="label" for="email">E-mail</label>
-                                <input type="email" name="username" class="form-control" id="email" placeholder="Your e-mail">
+                                <label class="label" for="email">Username</label>
+                                <input type="text" name="username" class="form-control" id="email" placeholder="Ex: jatimtimesnetwork">
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -70,7 +72,7 @@
 
                 <div class="form-links mt-2">
                     <div>
-                        <a href="<?= base_url('pendaftaran/tambah/')?>">Belum punya akun? Daftar Sekarang</a>
+                        <a href="https://wa.me/+6281231390340">Belum punya akun? Chat Tim IT</a>
                     </div>
                     <!-- <div><a href="app-forgot-password.html" class="text-muted">Forgot Password?</a></div> -->
                 </div>

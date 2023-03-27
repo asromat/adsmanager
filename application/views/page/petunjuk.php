@@ -1,3 +1,21 @@
+<!-- App Header -->
+<div class="appHeader">
+    <div class="left">
+        <a href="<?= base_url("")?>" class="headerButton">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </a>
+    </div>
+    <div class="pageTitle">
+        <?= $menu ?>
+    </div>
+    <!-- <div class="right">
+        <a href="#" class="headerButton" data-bs-toggle="modal" data-bs-target="#addCardActionSheet">
+            <ion-icon name="add-outline"></ion-icon>
+        </a>
+    </div> -->
+</div>
+<!-- * App Header -->
+
 <!-- App Capsule -->
 <div id="appCapsule">
 
@@ -6,7 +24,7 @@
 			<img src="<?= base_url() ?>/assets/img/sample/photo/3.jpg" alt="image" class="imaged img-fluid">
 		</figure> -->
 		<h1>
-			Tata Cara Penggunaan Aplikasi EDSCIENCE
+			Tata Cara Penggunaan JTN Ads Manager
 		</h1>
 
 		<div class="lead">
@@ -16,10 +34,20 @@
 
 	<div class="section mt-2">
 		<p>
-		<ol>
-			<li>Masukkan user name terlebih dahulu, kemudian klik log in.</li>
-			<li>Jelajahi materi sesuai dengan fitur</li>
-		</ol>
+		<h4>Iklan Kontrak</h4>
+			<ol>
+				<li>Masukkan kontrak iklan terlebih dahulu</li>
+				<li>Pilih menu Tambah Iklan > Kontrak</li>
+				<li>Masukkan data iklan sesuai jenis</li>
+				<li>Sistem akan secara otomatis menghitung</li>
+			</ol>
+		<h4>Iklan Isidentil</h4>
+			<ol>
+				<li>Masukkan kontrak iklan terlebih dahulu</li>
+				<li>Pilih menu Tambah Iklan > Isidentil</li>
+				<li>Masukkan data iklan sesuai jenis</li>
+				<li>Sistem akan secara otomatis menghitung</li>
+			</ol>
 		</p>
 	</div>
 

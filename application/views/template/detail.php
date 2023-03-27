@@ -25,22 +25,22 @@
     <!-- * loader -->
 
     <!-- App Header -->
-    <div class="appHeader">
-        <div class="left">
-            <a href="#" class="headerButton goBack">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </a>
-        </div>
-        <div class="pageTitle">
-            <?= $menu ?>
-        </div>
-        <!-- <div class="right">
-            <a href="#" class="headerButton" data-bs-toggle="modal" data-bs-target="#addCardActionSheet">
-                <ion-icon name="add-outline"></ion-icon>
-            </a>
-        </div> -->
+<div class="appHeader">
+    <div class="left">
+        <a href="<?= base_url("iklan/kontrak") ?>" class="headerButton">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </a>
     </div>
-    <!-- * App Header -->
+    <div class="pageTitle">
+        <?= $menu ?>
+    </div>
+    <!-- <div class="right">
+        <a href="#" class="headerButton" data-bs-toggle="modal" data-bs-target="#addCardActionSheet">
+            <ion-icon name="add-outline"></ion-icon>
+        </a>
+    </div> -->
+</div>
+<!-- * App Header -->
 
 	<?= $contents?>
 
@@ -54,14 +54,20 @@
         </a>
         <a href="<?= base_url("subtema/pencarian")?>" class="item <?=$this->uri->segment(2) == 'pencarian' ? "active" : ""?>">
             <div class="col">
-                <ion-icon name="search-outline"></ion-icon>
-                <strong>Search</strong>
+                <ion-icon name="stats-chart-outline"></ion-icon>
+                <strong>Statistik</strong>
             </div>
         </a>
         <a href="<?= base_url("pertanyaan")?>" class="item <?=$this->uri->segment(1) == 'pertanyaan' ? "active" : ""?>">
             <div class="col">
-				<ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-                <strong>Chat</strong>
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <strong>Input</strong>
+            </div>
+        </a>
+        <a href="<?= base_url("pertanyaan")?>" class="item <?=$this->uri->segment(1) == 'pertanyaan' ? "active" : ""?>">
+            <div class="col">
+                <ion-icon name="book-outline"></ion-icon>
+                <strong>Data</strong>
             </div>
         </a>
         <a href="<?= base_url("page/profil")?>" class="item <?=$this->uri->segment(2) == 'profil' ? "active" : ""?>">

@@ -42,6 +42,12 @@ class Fungsi {
 		return $query;
 	}
 
+	function timeToStr($tipe = null, $value = null)
+    {
+        $tanggal = date($tipe,strtotime($value));
+        return $tanggal;
+    }
+
 	function pilihan($tabel) {		
 		$query = $this->ci->db->get($tabel);
 		return $query;
