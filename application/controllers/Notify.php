@@ -35,7 +35,7 @@ class Notify extends CI_Controller
 
         foreach ($row->result() as $key => $data) {
             if ($data->nama_wartawan != $nama_wartawan) {
-                $pesan = $pesan . $nama_wartawan . " - " . "Tulisan : " . $no . " Poin : " . $total_poin . "\n"; 
+                $pesan = $pesan . "*". $nama_wartawan . "* - " . "Tulisan : " . $no . " Poin : " . $total_poin . "\n"; 
                 $nama_wartawan = $data->nama_wartawan; 
                 $no = 1;
                 $total_poin = $data->bobot_berita; 
