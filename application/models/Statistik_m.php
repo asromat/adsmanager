@@ -35,6 +35,21 @@ class Statistik_m extends CI_Model
 		return $query;
     }
 
+    function listBeritaToday($id = null)
+    {
+        $this->db->from('tbl_draf');
+		if ($id != null) {
+			$this->db->where('id', $id);
+		}
+        $this->db->like('tanggal', date("Y") . "-" . date("m") . "-" . date("d"));
+        // $this->db->like('tanggal', "2022" . "-" . "08");
+        $this->db->where('nama_wartawan !=', null);
+        $this->db->where('status', "3");
+        $this->db->order_by("nama_wartawan","asc");
+		$query = $this->db->get();
+		return $query;
+    }
+
     
     public function totalTulisanBulanIni($id = null)
     {
@@ -43,6 +58,17 @@ class Statistik_m extends CI_Model
             $this->db->like('news_writer', $id);
 		}
         $this->db->like('news_datepub', date("Y") . "-" . date("m"));
+		$query = $this->db->get();
+		return $query;
+    }
+
+    public function totalTulisanHariIni($id = null)
+    {
+        $this->db->from('db_news');
+		if ($id != null) {
+            $this->db->like('news_writer', $id);
+		}
+        $this->db->like('news_datepub', date("Y") . "-" . date("m") . "-" . date("d"));
 		$query = $this->db->get();
 		return $query;
     }
