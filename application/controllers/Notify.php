@@ -97,4 +97,30 @@ class Notify extends CI_Controller
         $this->wa->send("085655525338", $kalimat); // Mbak Nia
 
     }
+
+    function waPending()
+    {
+        $this->load->model("statistik_m");
+
+		$row = $this->statistik_m->listBeritaPendingToday();
+        $no = 1;
+        $pesan = "";
+
+        foreach ($row->result() as $key => $data) {
+            $pesan = $pesan . $no . ". " . $data->nama_wartawan . " - " . substr($data->judul,0,20) . "...\n";
+            $no++;
+        } 
+
+        $kalimat = "*[BERITA PENDING PER JAM ". date("H:i") . " TANGGAL " . date("d-m-y") . "]" . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\n*Abaikan jika memang ada duplikat di draft";
+
+        $this->wa->send("081231390340", $kalimat); // Fitrah backup
+        $this->wa->send("081333673000", $kalimat); // Mas Heri
+        $this->wa->send("082233303178", $kalimat); // Mas Firdaus
+        $this->wa->send("081230379610", $kalimat); // Pak Yunan
+        $this->wa->send("081334754331", $kalimat); // Pak Yayak
+        $this->wa->send("085258927995", $kalimat); // Nyla
+        $this->wa->send("081222882015", $kalimat); // Pak Nana
+        $this->wa->send("085655525338", $kalimat); // Mbak Nia
+
+    }
 }

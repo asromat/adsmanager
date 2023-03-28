@@ -50,6 +50,21 @@ class Statistik_m extends CI_Model
 		return $query;
     }
 
+    function listBeritaPendingToday($id = null)
+    {
+        $this->db->from('tbl_draf');
+		if ($id != null) {
+			$this->db->where('id', $id);
+		}
+        $this->db->like('tanggal', date("Y") . "-" . date("m") . "-" . date("d"));
+        // $this->db->like('tanggal', "2022" . "-" . "08");
+        $this->db->where('nama_wartawan !=', null);
+        $this->db->where('status', "1");
+        $this->db->order_by("nama_wartawan","asc");
+		$query = $this->db->get();
+		return $query;
+    }
+
     
     public function totalTulisanBulanIni($id = null)
     {
