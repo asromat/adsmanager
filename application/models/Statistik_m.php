@@ -41,8 +41,8 @@ class Statistik_m extends CI_Model
 		if ($id != null) {
 			$this->db->where('id', $id);
 		}
-        $this->db->like('tanggal', date("Y") . "-" . date("m") . "-" . date("d"));
-        // $this->db->like('tanggal', "2022" . "-" . "08");
+        // $this->db->like('tanggal', date("Y") . "-" . date("m") . "-" . date("d"));
+        $this->db->like('tanggal', "2023-04-02");
         $this->db->where('nama_wartawan !=', null);
         $this->db->where('status', "3");
         $this->db->order_by("nama_wartawan","asc");

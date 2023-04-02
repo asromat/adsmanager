@@ -24,7 +24,7 @@ class Statistik extends CI_Controller
 
 		$data['menu'] = "Statistik Wartawan";
 		// $data['row'] = $this->statistik_m->getWartawan();
-		$data['row'] = $this->statistik_m->listBerita();
+		$data['row'] = $this->statistik_m->listBeritaToday();
 		$data['total_tulisan'] = $this->statistik_m->totalTulisanBulanIni()->num_rows();
 		$this->templateadmin->load('template/detail', 'statistik/wartawan/data', $data);
     }

@@ -46,11 +46,15 @@ class Notify extends CI_Controller
         } 
 
         $kalimat = "*[STATISTIK PERKEMBANGAN BULANAN]*\n\n*Total Tulisan* " . date("Y") . "/" . date("m"). " = ". $total_tulisan . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\nInfo lengkap bisa diakses melalui https://iklan.jtnweb.my.id\nPassword Kontak IT";
-        $this->wa->send("081231390340", $kalimat);
-        if (date("H") > "19") {
-            $this->wa->send("081333673000", $kalimat);
-            $this->wa->send("082233303178", $kalimat);
-        }
+
+        $this->wa->send("081231390340", $kalimat); // Fitrah backup
+        $this->wa->send("081333673000", $kalimat); // Mas Heri
+        $this->wa->send("082233303178", $kalimat); // Mas Firdaus
+        $this->wa->send("081230379610", $kalimat); // Pak Yunan
+        $this->wa->send("081334754331", $kalimat); // Pak Yayak
+        $this->wa->send("085258927995", $kalimat); // Nyla
+        $this->wa->send("081222882015", $kalimat); // Pak Nana
+        $this->wa->send("085655525338", $kalimat); // Mbak Nia
     }
 
     function waHarian()
@@ -78,6 +82,7 @@ class Notify extends CI_Controller
                 $total_poin = $total_poin + $data->bobot_berita;
             } 
         }
+        $pesan = $pesan . "*". $nama_wartawan . "* - " . "Tulisan : " . $no . " Poin : " . $total_poin . "\n";
         
         if (date("H") < "13") {
             $waktu = "SIANG PER JAM 12.00";

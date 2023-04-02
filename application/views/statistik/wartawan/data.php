@@ -64,4 +64,42 @@
         </div>
     </div>
 </div>
+<?php $nama_wartawan = null;
+$no = 1;
+foreach ($row->result() as $key => $data) {; ?>
+    <?= $data->nama_wartawan ?> - <?= $data->judul ?> <br>
+<?php } ?>
 <br>
+<br>
+<br>
+<?php $nama_wartawan = null;
+$no = 1;
+foreach ($row->result() as $key => $data) {; ?>
+    <?php if ($data->nama_wartawan == $nama_wartawan) { ?>
+        <?php $no++ ?>
+    <?php } else { ?>
+        <?= $nama_wartawan ?> - <?= $no ?> <br>
+        <?php $nama_wartawan = $data->nama_wartawan ?>
+        <?php $no = 1 ?>
+    <?php } ?>
+<?php } ?>
+<?= $nama_wartawan = $data->nama_wartawan?> - <?= $no ?>
+<br>
+<br>
+<?php
+$nama_wartawan = null;
+$total_poin = null;
+$no = 1;
+foreach ($row->result() as $key => $data) {; ?>
+    <?php if ($data->nama_wartawan == $nama_wartawan) { ?>
+        <?php $no++ ?>
+        <?php $total_poin = $total_poin + $data->bobot_berita ?>
+    <?php } else { ?>
+        <?= $nama_wartawan ?> - <?= $no ?> - Poin <?= $total_poin ?><br>
+        <?php $nama_wartawan = $data->nama_wartawan ?>
+        <?php $no = 1;
+        $total_poin = $data->bobot_berita; ?>
+    <?php } ?>
+<?php } ?>
+<?= $nama_wartawan = $data->nama_wartawan?> - <?= $no ?>
+<br><br><br><br>
