@@ -117,7 +117,7 @@ class Notify extends CI_Controller
             $no++;
         } 
 
-        $kalimat = "*[BERITA PENDING PER JAM ". date("H:i") . " TANGGAL " . date("d-m-y") . "]" . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\n*Abaikan jika memang ada duplikat di draft";
+        $kalimat = "*[BERITA PENDING PER JAM ". date("H:i") . " TANGGAL " . date("d-m-y") . "]*" . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\n*Abaikan jika memang ada duplikat di draft";
 
         $this->wa->send("081231390340", $kalimat); // Fitrah backup
         $this->wa->send("081333673000", $kalimat); // Mas Heri
