@@ -43,7 +43,8 @@ class Notify extends CI_Controller
                 $no++;
                 $total_poin = $total_poin + $data->bobot_berita;
             } 
-        } 
+        }
+        $pesan = $pesan . "*". $nama_wartawan . "* - " . "Tulisan : " . $no . " Poin : " . $total_poin . "\n"; 
 
         $kalimat = "*[STATISTIK PERKEMBANGAN BULANAN]*\n\n*Total Tulisan* " . date("Y") . "/" . date("m"). " = ". $total_tulisan . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\nInfo lengkap bisa diakses melalui https://iklan.jtnweb.my.id\nPassword Kontak IT";
 
