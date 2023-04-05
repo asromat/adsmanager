@@ -85,6 +85,19 @@
 						</h1>
 					</a>
 				</div>
+				<div class="in">
+					<div>
+						<a href="<?= base_url("iklangeser") ?>">
+							<h4>Tambah Iklan Slider</h4>
+						</a>
+						<p>Iklan Slider</p>
+					</div>
+					<a href="<?= base_url("iklangeser") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 		</div>
