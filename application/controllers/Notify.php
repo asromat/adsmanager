@@ -91,8 +91,8 @@ class Notify extends CI_Controller
             $waktu = "MALAM PER JAM 21.00";
         }
 
-        $kalimat = "*[UPDATE TULISAN ". $waktu ."]*\n\n*Total Tulisan* " . date("d") . "/" . date("m") . "/" . date("Y"). " = ". $total_tulisan . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\nInfo lengkap bisa diakses melalui https://iklan.jtnweb.my.id\nPassword Kontak IT";
-
+        $kalimat = "*[UPDATE TULISAN ". date("H:i") ."]*\n\n*Total Tulisan* " . date("d") . "/" . date("m") . "/" . date("Y"). " = ". $total_tulisan . "\n\n" . $pesan . "\n\ndiupdate pada " . date("d-m-Y H:i:sa") . "\nInfo lengkap bisa diakses melalui https://iklan.jtnweb.my.id\nPassword Kontak IT";
+        
         $this->wa->send("081231390340", $kalimat); // Fitrah backup
         $this->wa->send("081333673000", $kalimat); // Mas Heri
         $this->wa->send("082233303178", $kalimat); // Mas Firdaus
